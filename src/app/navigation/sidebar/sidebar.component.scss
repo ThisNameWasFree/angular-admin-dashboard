@@ -1,0 +1,25 @@
+.navigation {
+  padding: 33%;
+  height: 100%;
+
+  &__items {}
+
+  &__item {
+    margin-bottom: 1.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    transform: scale(2);
+    transition: all .3s;
+    color: #404040;
+
+    &:hover {
+      transition: all .3s;
+      color: #808080;
+    }
+  }
+}

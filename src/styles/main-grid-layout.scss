@@ -1,0 +1,32 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 5vh 85vh 10vh; // height of: header = 5vh; main = 85vh; footer = 10vh;
+  grid-column-gap: 1em; // distance between sidebar & main
+  grid-template-areas:
+  "header header header"
+  "sidebar main main"
+  "footer footer footer";
+}
+
+.element {
+  border: 1px solid #000;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  width: 5em;
+}
+
+.main {
+  grid-area: main;
+  overflow-y: auto;
+  width: calc(100vw - 6em); // main (100vw) - sidebar (5em) - distance between sidebar & main (1em)
+}
+
+.footer {
+  grid-area: footer;
+}
