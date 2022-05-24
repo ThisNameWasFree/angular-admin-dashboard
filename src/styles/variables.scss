@@ -1,0 +1,13 @@
+// colors
+$black: #404040;
+$grey: #808080;
+$white: #fff;
+
+// transition
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+  transition: $duration;
+}

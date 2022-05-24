@@ -1,3 +1,5 @@
+@import "src/styles/variables";
+
 .navigation {
   padding: 33%;
   height: 100%;
@@ -14,12 +16,12 @@
 
   &__icon {
     transform: scale(2);
-    transition: all .3s;
-    color: #404040;
+    @include transition(.3s);
+    color: $black;
 
     &:hover {
-      transition: all .3s;
-      color: #808080;
+      @include transition(.3s);
+      color: $grey;
     }
   }
 }

@@ -1,3 +1,5 @@
+@import "src/styles/variables";
+
 .burger {
   display: none;
   float: right;
@@ -5,12 +7,12 @@
   &__btn {
     height: 4vh;
     border: none;
-    background-color: #fff;
+    background-color: $white;
   }
 
   &__link-item {
     text-decoration: none;
-    color: #404040;
+    color: $black;
   }
 }
 
