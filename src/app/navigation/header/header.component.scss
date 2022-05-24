@@ -1,0 +1,21 @@
+.burger {
+  display: none;
+  float: right;
+
+  &__btn {
+    height: 4vh;
+    border: none;
+    background-color: #fff;
+  }
+
+  &__link-item {
+    text-decoration: none;
+    color: #404040;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+}

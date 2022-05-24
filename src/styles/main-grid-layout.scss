@@ -30,3 +30,17 @@
 .footer {
   grid-area: footer;
 }
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    grid-column-gap: 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    width: 100vw;
+  }
+}

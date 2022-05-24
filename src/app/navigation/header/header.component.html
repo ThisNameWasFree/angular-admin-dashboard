@@ -1,1 +1,23 @@
-<p>header works!</p>
+<div class="burger">
+  <button class="burger__btn" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+
+    <button mat-menu-item>
+      <a class="burger__link-item" routerLink="/">
+        <mat-icon>desktop_mac</mat-icon>
+        <span>Dashboard</span>
+      </a>
+    </button>
+
+    <button mat-menu-item>
+      <a class="burger__link-item" routerLink="/settings">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </a>
+    </button>
+
+  </mat-menu>
+</div>

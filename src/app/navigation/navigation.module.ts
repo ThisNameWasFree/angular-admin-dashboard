@@ -5,7 +5,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from "@angular/router";
 import { MatIconModule } from "@angular/material/icon";
-import {MatTooltipModule} from "@angular/material/tooltip";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatMenuModule } from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     SidebarComponent,
     FooterComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    MatTooltipModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatMenuModule
+    ]
 })
 export class NavigationModule { }
