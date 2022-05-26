@@ -7,6 +7,12 @@
     </li>
 
     <li class="navigation__item">
+      <a routerLink="/tasks" #tooltip="matTooltip" matTooltip="Tasks" matTooltipPosition="right">
+        <mat-icon class="navigation__icon">done_outline</mat-icon>
+      </a>
+    </li>
+
+    <li class="navigation__item">
       <a routerLink="/settings" #tooltip="matTooltip" matTooltip="Settings" matTooltipPosition="right">
         <mat-icon class="navigation__icon">settings</mat-icon>
       </a>

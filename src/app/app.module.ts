@@ -7,6 +7,7 @@ import { NavigationModule } from "./navigation/navigation.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { SettingsModule } from "./settings/settings.module";
+import { TasksModule } from "./tasks/tasks.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SettingsModule } from "./settings/settings.module";
     NavigationModule,
     BrowserAnimationsModule,
     DashboardModule,
-    SettingsModule
+    SettingsModule,
+    TasksModule
   ],
   providers: [],
   bootstrap: [AppComponent]
