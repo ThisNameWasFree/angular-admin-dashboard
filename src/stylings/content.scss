@@ -1,0 +1,13 @@
+.container {
+  padding: 1em;
+}
+
+.mat-typography h1 {
+  font: 400 2.5em/1em Roboto, "Helvetica Neue", sans-serif;
+  color: $black;
+  text-transform: capitalize;
+}
+
+.mat-raised-button.mat-primary {
+  margin-bottom: 1em;
+}

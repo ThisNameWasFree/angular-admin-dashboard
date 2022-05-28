@@ -10,16 +10,14 @@
   "footer footer footer";
 }
 
-.element {
-  border: 1px solid $black;
-}
-
 .header {
   grid-area: header;
+  border-bottom: 1px solid $black;
 }
 
 .sidebar {
   grid-area: sidebar;
+  border-right: 1px solid $black;
   width: 5em;
 }
 
@@ -31,6 +29,7 @@
 
 .footer {
   grid-area: footer;
+  border-top: 1px solid $black;
 }
 
 @media screen and (max-width: 767px) {
