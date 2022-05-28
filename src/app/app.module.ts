@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { SettingsModule } from "./settings/settings.module";
 import { TasksModule } from "./tasks/tasks.module";
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TasksModule } from "./tasks/tasks.module";
     BrowserAnimationsModule,
     DashboardModule,
     SettingsModule,
-    TasksModule
+    TasksModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
