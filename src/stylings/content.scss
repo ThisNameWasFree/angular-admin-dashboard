@@ -12,6 +12,39 @@
   margin-bottom: 1em;
 }
 
+.table {
+  border-collapse: collapse;
+  background-color: $green;
+
+  th,
+  td {
+    padding: 1em 2em;
+    white-space: nowrap;
+  }
+
+  th {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: $white;
+  }
+
+  td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &__body-items {
+
+    &:nth-child(odd) {
+      background-color: $white;
+    }
+
+    &:nth-child(even) {
+      background-color: $gray;
+    }
+  }
+}
+
 .task {
 
   &__items {
