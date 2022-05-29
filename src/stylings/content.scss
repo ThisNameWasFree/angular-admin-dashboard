@@ -11,3 +11,35 @@
 .mat-raised-button.mat-primary {
   margin-bottom: 1em;
 }
+
+.task {
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: 1em;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .task__item {
+    padding: 0;
+  }
+}

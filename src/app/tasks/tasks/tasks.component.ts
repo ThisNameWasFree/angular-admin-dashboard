@@ -9,16 +9,22 @@ import { AddTaskComponent } from "../add-task/add-task.component";
 })
 export class TasksComponent implements OnInit {
 
+  public tasks: any[] = [];
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  addNewTask() {
+  public addNewTask(): void {
     const dialogRef = this.dialog.open(AddTaskComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+    dialogRef.afterClosed().subscribe((returnData) => {
+      this.addNewTaskToList(returnData);
     });
+  }
+
+  public addNewTaskToList(task: any): void {
+    this.tasks.push(task);
   }
 }

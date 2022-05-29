@@ -2,4 +2,14 @@
 
 <button mat-raised-button color="primary" (click)="addNewTask()">+ Add New Task</button>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolorum earum ex illum inventore labore, magni neque pariatur placeat provident quas quos rem reprehenderit tempore tenetur veniam veritatis. Dolores, tempore?</p>
+<ul class="list-group">
+  <li *ngFor="let task of tasks" class="list-group-item">
+    <span> {{ task?.selectedTracker }} </span>
+    <span> {{ task?.subject }} </span>
+    <span> {{ task?.description }} </span>
+    <span> {{ task?.selectedStatus }} </span>
+    <span> {{ task?.selectedPriority }} </span>
+    <span> {{ task?.selectedImportance }} </span>
+    <span> {{ task?.selectedDonePercent }} </span>
+  </li>
+</ul>
