@@ -22,9 +22,10 @@
       <td><span> {{ task?.selectedStatus }} </span></td>
       <td><span> {{ task?.selectedPriority }} </span></td>
       <td><span> {{ task?.selectedImportance }} </span></td>
-      <td>
-        <span> {{ task?.donePercent }} </span>
-        <span> %</span>
+      <td>{{ task?.donePercent }} %
+        <span class="progress-bar__wrapper">
+          <mat-progress-bar class="progress-bar__inner" [color]="color" [value]="task?.donePercent"></mat-progress-bar>
+        </span>
       </td>
     </tr>
   </tbody>

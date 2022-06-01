@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import { AddTaskComponent } from "../add-task/add-task.component";
+import { ThemePalette } from "@angular/material/core";
 
 @Component({
   selector: 'app-tasks',
@@ -10,6 +11,7 @@ import { AddTaskComponent } from "../add-task/add-task.component";
 export class TasksComponent implements OnInit {
 
   public tasks: any[] = [];
+  public color: ThemePalette = 'primary';
 
   constructor(public dialog: MatDialog) { }
 
