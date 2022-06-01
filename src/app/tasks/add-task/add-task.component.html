@@ -60,10 +60,15 @@
 
       <mat-form-field class="task__item" appearance="fill">
         <mat-label>Done %</mat-label>
-        <mat-select [(value)]="selectedDonePercent">
-          <mat-option></mat-option>
-          <mat-option [value]="done.value" *ngFor="let done of donePercent">{{ done.viewValue }}</mat-option>
-        </mat-select>
+        <input type="number"
+               matInput
+               min="0"
+               max="100"
+               step="10"
+               [(ngModel)]="donePercent"
+               pattern="/^-?\d+\.?\d*$/"
+               onKeyPress="if(this.value.length==3) return false;"
+        />
       </mat-form-field>
 
     </div>

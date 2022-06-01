@@ -53,27 +53,14 @@ export class AddTaskComponent implements OnInit {
     { value: 'would be nice', viewValue: 'Would be Nice' }
   ];
 
-  public donePercent: SelectList[] = [
-    { value: '0 %', viewValue: '0 %' },
-    { value: '10 %', viewValue: '10 %' },
-    { value: '20 %', viewValue: '20 %' },
-    { value: '30 %', viewValue: '30 %' },
-    { value: '40 %', viewValue: '40 %' },
-    { value: '50 %', viewValue: '50 %' },
-    { value: '60 %', viewValue: '60 %' },
-    { value: '70 %', viewValue: '70 %' },
-    { value: '80 %', viewValue: '80 %' },
-    { value: '90 %', viewValue: '90 %' },
-    { value: '100 %', viewValue: '100 %' }
-  ];
-
   public selectedTracker = this.tracker[0].value;
   public subject: string = '';
   public description: string = '';
   public selectedStatus = this.statuses[0].value;
   public selectedPriority = this.priorities[1].value;
   public selectedImportance = this.importance[0].value;
-  public selectedDonePercent = this.donePercent[0].value;
+  public donePercent: number = 0;
+
   // public assignee
   // public files
   // public parentTask: number = 0;
@@ -89,6 +76,10 @@ export class AddTaskComponent implements OnInit {
   }
 
   saveTask() {
+    if (this.donePercent > 100) {
+      this.donePercent = 100;
+    }
+
     const taskObject: any = {
       subject: this.subject,
       description: this.description,
@@ -96,7 +87,7 @@ export class AddTaskComponent implements OnInit {
       selectedStatus: this.selectedStatus,
       selectedPriority: this.selectedPriority,
       selectedImportance: this.selectedImportance,
-      selectedDonePercent: this.selectedDonePercent
+      donePercent: this.donePercent
     };
 
     let dataToReturn = taskObject;

@@ -22,7 +22,10 @@
       <td><span> {{ task?.selectedStatus }} </span></td>
       <td><span> {{ task?.selectedPriority }} </span></td>
       <td><span> {{ task?.selectedImportance }} </span></td>
-      <td><span> {{ task?.selectedDonePercent }} </span></td>
+      <td>
+        <span> {{ task?.donePercent }} </span>
+        <span> %</span>
+      </td>
     </tr>
   </tbody>
 </table>
